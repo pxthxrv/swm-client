@@ -2,6 +2,7 @@ import "./Keyinsights.scss";
 import React from "react";
 import PlusIcon from "../../assets/Vector.png";
 import { useState } from "react";
+import Comments from "../../Pages/Comments/comments";
 
 const Keyinsights = () => {
   const [Item1, setItem1] = useState("Tech Stocks to rise in near future.");
@@ -12,6 +13,7 @@ const Keyinsights = () => {
   const [ShowItem2, setShowItem2] = useState(true);
   const [ShowItem3, setShowItem3] = useState(true);
   const [ShowItem4, setShowItem4] = useState(true);
+  const [showComments, setShowComments] = useState(false);
 
   const buttonHandler = (e) => {
     console.log(`${e.target.name} shown`);
@@ -34,6 +36,19 @@ const Keyinsights = () => {
     if (e.target.name !== "button4") {
       console.log("button4 hidden");
       setShowItem4(false);
+    }
+  };
+
+  const commentsShowHide = () => {
+    if (
+      ShowItem1 === true &&
+      ShowItem2 === true &&
+      ShowItem3 === true &&
+      ShowItem4 === true
+    ) {
+      return "";
+    } else {
+      return "keyinsights__img--hidden";
     }
   };
 
@@ -75,7 +90,9 @@ const Keyinsights = () => {
     <div className="keyinsights">
       <h1 className="keyinsights__header">Key Insights</h1>
       <div className="keyinsights__container">
+        
         <div className={`keyinsights__button-container ${containerShowHide()}`}>
+        
           <button
             className={`keyinsights__button ${ShowHide(ShowItem1)}`}
             name="button1"
@@ -83,6 +100,7 @@ const Keyinsights = () => {
           >
             {Item1}
             <div className="keyinsights__img-container">
+            <Comments className={`${containerShowHide()}`}/>
               <img
                 src={PlusIcon}
                 alt="Plus Icon"
