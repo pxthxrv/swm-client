@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: "Frutier";
-    src: url("../../assets/fonts/Frutiger-Regular.ttf") format("opentype");
+    src: url("../../assets/fonts/Frutiger-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
   }
@@ -27,8 +27,8 @@
 // }
 
 body {
-  font-family: "Avenir Next", sans-serif;
-  color: $brainflix-black;
+  font-family: "Frutier", sans-serif;
+  color: $black;
 }
 
 a {
