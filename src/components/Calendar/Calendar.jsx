@@ -20,6 +20,18 @@ const Calendar = ({ view }) => {
         initialView={view}
         selectable={true}
         dateClick={dateEventHandler}
+        events={[
+          {
+            title: "Capstone Work Week",
+            start: "2023-10-09",
+            end: "2023-10-15",
+          },
+          {
+            title: "Demo Day",
+            start: "2023-10-18",
+            allDay: true,
+          },
+        ]}
       />
     </div>
   );
