@@ -1,6 +1,7 @@
 import "./Keyinsights.scss";
 import React from "react";
 import PlusIcon from "../../assets/Vector.png";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Comments from "../../Pages/Comments/comments";
 
@@ -14,6 +15,12 @@ const Keyinsights = () => {
   const [ShowItem3, setShowItem3] = useState(true);
   const [ShowItem4, setShowItem4] = useState(true);
   const [showComments, setShowComments] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/");
+  }
 
   const buttonHandler = (e) => {
     console.log(`${e.target.name} shown`);
@@ -88,7 +95,9 @@ const Keyinsights = () => {
 
   return (
     <div className="keyinsights">
-      <h1 className="keyinsights__header">Key Insights</h1>
+
+      <h1 className="keyinsights__header" onClick={handleClick}>Key Insights</h1>
+
       <div className="keyinsights__container">
         
         <div className={`keyinsights__button-container ${containerShowHide()}`}>
@@ -99,8 +108,9 @@ const Keyinsights = () => {
             onClick={buttonHandler}
           >
             {Item1}
+            {/* <div >{Item1}</div> */}
             <div className="keyinsights__img-container">
-            <Comments className={`${containerShowHide()}`}/>
+            {/* <Comments className={`${containerShowHide()}`}/> */}
               <img
                 src={PlusIcon}
                 alt="Plus Icon"
