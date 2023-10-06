@@ -1,0 +1,17 @@
+@import "../../styles/partials/mixins";
+
+.team {
+    @include flex-col;
+
+    padding: 2.7rem 2.7rem 1.6rem 2.7rem;
+
+    &__title {
+        width:100%;
+    }
+
+    &__people {
+        @include flex-row;
+        gap: 1.6rem;
+    }
+
+}
