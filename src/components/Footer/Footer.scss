@@ -8,8 +8,8 @@
     border-top-left-radius: 2rem;
 
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    // position: absolute;
+    // bottom: 0;
 
     &__row {
         @include flex-row;
