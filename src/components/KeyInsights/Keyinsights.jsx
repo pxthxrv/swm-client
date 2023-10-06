@@ -45,11 +45,37 @@ const Keyinsights = () => {
     }
   };
 
+  const ImgShowHide = () => {
+    if (
+      ShowItem1 === true &&
+      ShowItem2 === true &&
+      ShowItem3 === true &&
+      ShowItem4 === true
+    ) {
+      return "";
+    } else {
+      return "keyinsights__img--hidden";
+    }
+  };
+
+  const containerShowHide = () => {
+    if (
+      ShowItem1 === true &&
+      ShowItem2 === true &&
+      ShowItem3 === true &&
+      ShowItem4 === true
+    ) {
+      return "";
+    } else {
+      return "keyinsights__button-container--hidden";
+    }
+  };
+
   return (
     <div className="keyinsights">
       <h1 className="keyinsights__header">Key Insights</h1>
       <div className="keyinsights__container">
-        <div className="keyinsights__button-container">
+        <div className={`keyinsights__button-container ${containerShowHide()}`}>
           <button
             className={`keyinsights__button ${ShowHide(ShowItem1)}`}
             name="button1"
@@ -60,12 +86,12 @@ const Keyinsights = () => {
               <img
                 src={PlusIcon}
                 alt="Plus Icon"
-                className="keyinsights__img"
+                className={`keyinsights__img ${ImgShowHide()}`}
               />
             </div>
           </button>
         </div>
-        <div className="keyinsights__button-container">
+        <div className={`keyinsights__button-container ${containerShowHide()}`}>
           <button
             className={`keyinsights__button ${ShowHide(ShowItem2)}`}
             name="button2"
@@ -76,12 +102,12 @@ const Keyinsights = () => {
               <img
                 src={PlusIcon}
                 alt="Plus Icon"
-                className="keyinsights__img"
+                className={`keyinsights__img ${ImgShowHide()}`}
               />
             </div>
           </button>
         </div>
-        <div className="keyinsights__button-container">
+        <div className={`keyinsights__button-container ${containerShowHide()}`}>
           <button
             className={`keyinsights__button ${ShowHide(ShowItem3)}`}
             name="button3"
@@ -92,12 +118,12 @@ const Keyinsights = () => {
               <img
                 src={PlusIcon}
                 alt="Plus Icon"
-                className="keyinsights__img"
+                className={`keyinsights__img ${ImgShowHide()}`}
               />
             </div>
           </button>
         </div>
-        <div className="keyinsights__button-container">
+        <div className={`keyinsights__button-container ${containerShowHide()}`}>
           <button
             className={`keyinsights__button ${ShowHide(ShowItem4)}`}
             name="button4"
@@ -108,7 +134,7 @@ const Keyinsights = () => {
               <img
                 src={PlusIcon}
                 alt="Plus Icon"
-                className="keyinsights__img"
+                className={`keyinsights__img ${ImgShowHide()}`}
               />
             </div>
           </button>
