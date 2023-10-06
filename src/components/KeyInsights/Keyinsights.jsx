@@ -2,7 +2,8 @@ import "./Keyinsights.scss";
 import React from "react";
 import PlusIcon from "../../assets/Vector.png";
 import { useState } from "react";
-import Comments from "../../Pages/Comments/comments";
+import { Link } from "react-router-dom";
+// import Comments from "./Pages/Comments/comments";
 
 const Keyinsights = () => {
   const [Item1, setItem1] = useState("Tech Stocks to rise in near future.");
@@ -13,7 +14,6 @@ const Keyinsights = () => {
   const [ShowItem2, setShowItem2] = useState(true);
   const [ShowItem3, setShowItem3] = useState(true);
   const [ShowItem4, setShowItem4] = useState(true);
-  const [showComments, setShowComments] = useState(false);
 
   const buttonHandler = (e) => {
     console.log(`${e.target.name} shown`);
@@ -36,19 +36,6 @@ const Keyinsights = () => {
     if (e.target.name !== "button4") {
       console.log("button4 hidden");
       setShowItem4(false);
-    }
-  };
-
-  const commentsShowHide = () => {
-    if (
-      ShowItem1 === true &&
-      ShowItem2 === true &&
-      ShowItem3 === true &&
-      ShowItem4 === true
-    ) {
-      return "";
-    } else {
-      return "keyinsights__img--hidden";
     }
   };
 
@@ -87,78 +74,94 @@ const Keyinsights = () => {
   };
 
   return (
-    <div className="keyinsights">
-      <h1 className="keyinsights__header">Key Insights</h1>
-      <div className="keyinsights__container">
-        
-        <div className={`keyinsights__button-container ${containerShowHide()}`}>
-        
-          <button
-            className={`keyinsights__button ${ShowHide(ShowItem1)}`}
-            name="button1"
-            onClick={buttonHandler}
+    <Router>
+      <div className="keyinsights">
+        <h1 className="keyinsights__header">Key Insights</h1>
+        <div className="keyinsights__container">
+          <div
+            className={`keyinsights__button-container ${containerShowHide()}`}
           >
-            {Item1}
-            <div className="keyinsights__img-container">
-            <Comments className={`${containerShowHide()}`}/>
-              <img
-                src={PlusIcon}
-                alt="Plus Icon"
-                className={`keyinsights__img ${ImgShowHide()}`}
-              />
-            </div>
-          </button>
-        </div>
-        <div className={`keyinsights__button-container ${containerShowHide()}`}>
-          <button
-            className={`keyinsights__button ${ShowHide(ShowItem2)}`}
-            name="button2"
-            onClick={buttonHandler}
+            <Link to="/comment">
+              <button
+                className={`keyinsights__button ${ShowHide(ShowItem1)}`}
+                name="button1"
+                onClick={buttonHandler}
+              >
+                {Item1}
+                <div className="keyinsights__img-container">
+                  <img
+                    src={PlusIcon}
+                    alt="Plus Icon"
+                    className={`keyinsights__img ${ImgShowHide()}`}
+                  />
+                  <Route path="/comment" component={Comments} />
+                </div>
+              </button>
+            </Link>
+          </div>
+          <div
+            className={`keyinsights__button-container ${containerShowHide()}`}
           >
-            {Item2}
-            <div className="keyinsights__img-container">
-              <img
-                src={PlusIcon}
-                alt="Plus Icon"
-                className={`keyinsights__img ${ImgShowHide()}`}
-              />
-            </div>
-          </button>
-        </div>
-        <div className={`keyinsights__button-container ${containerShowHide()}`}>
-          <button
-            className={`keyinsights__button ${ShowHide(ShowItem3)}`}
-            name="button3"
-            onClick={buttonHandler}
+            <Link to="/comment">
+              <button
+                className={`keyinsights__button ${ShowHide(ShowItem2)}`}
+                name="button2"
+                onClick={buttonHandler}
+              >
+                {Item2}
+                <div className="keyinsights__img-container">
+                  <img
+                    src={PlusIcon}
+                    alt="Plus Icon"
+                    className={`keyinsights__img ${ImgShowHide()}`}
+                  />
+                </div>
+              </button>
+            </Link>
+          </div>
+          <div
+            className={`keyinsights__button-container ${containerShowHide()}`}
           >
-            {Item3}
-            <div className="keyinsights__img-container">
-              <img
-                src={PlusIcon}
-                alt="Plus Icon"
-                className={`keyinsights__img ${ImgShowHide()}`}
-              />
-            </div>
-          </button>
-        </div>
-        <div className={`keyinsights__button-container ${containerShowHide()}`}>
-          <button
-            className={`keyinsights__button ${ShowHide(ShowItem4)}`}
-            name="button4"
-            onClick={buttonHandler}
+            <Link to="/comment">
+              <button
+                className={`keyinsights__button ${ShowHide(ShowItem3)}`}
+                name="button3"
+                onClick={buttonHandler}
+              >
+                {Item3}
+                <div className="keyinsights__img-container">
+                  <img
+                    src={PlusIcon}
+                    alt="Plus Icon"
+                    className={`keyinsights__img ${ImgShowHide()}`}
+                  />
+                </div>
+              </button>
+            </Link>
+          </div>
+          <div
+            className={`keyinsights__button-container ${containerShowHide()}`}
           >
-            {Item4}
-            <div className="keyinsights__img-container">
-              <img
-                src={PlusIcon}
-                alt="Plus Icon"
-                className={`keyinsights__img ${ImgShowHide()}`}
-              />
-            </div>
-          </button>
+            <Link to="/comment">
+              <button
+                className={`keyinsights__button ${ShowHide(ShowItem4)}`}
+                name="button4"
+                onClick={buttonHandler}
+              >
+                {Item4}
+                <div className="keyinsights__img-container">
+                  <img
+                    src={PlusIcon}
+                    alt="Plus Icon"
+                    className={`keyinsights__img ${ImgShowHide()}`}
+                  />
+                </div>
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </Router>
   );
 };
 

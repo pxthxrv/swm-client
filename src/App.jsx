@@ -8,9 +8,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* <Route path="/comments" element={<Comments />} /> */}
+        <Route path="/comment" element={<Comments />} />
         <Route path="/" element={<Home />} />
-
       </Routes>
     </Router>
   );
