@@ -15,14 +15,14 @@ function Comments({ onFormSubmit }) {
 	}
 
 	return (
-		<div className="comment">
-			<h3 className="comment__title">Tech stocks to rise in near future</h3>
+		<div className="insight">
+			<h3>Tech stocks to rise in near future</h3>
 			{confirmation ? <p>{confirmation}</p> : (
 				<>
-					<p className="comment__info">Tech stocks to rise in the near future due to ...</p>
-					<form className="comment__form" onSubmit={handleSubmit}>
-						<textarea className="text-area" type="textarea" placeholder="Leave a message..." onChange={handleInputChange} value={message} />
-						<button className="submit-button" type="submit">Submit</button>
+					<p>Tech stocks to rise in the near future due to ...</p>
+					<form onSubmit={handleSubmit}>
+						<textarea type="textarea" placeholder="Leave a message..." onChange={handleInputChange} value={message} />
+						<button type="submit">Submit</button>
 					</form>
 				</>
 			)}
