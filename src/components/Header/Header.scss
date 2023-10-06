@@ -1,0 +1,28 @@
+@import "../../styles/partials/mixins";
+
+.header {
+    @include flex-col;
+
+    &__col {
+        @include flex-col;
+        width: 100%;
+    }
+
+    &__row {
+        @include flex-row;
+
+        padding: 1.3rem 1.6rem 3.6rem 1.6rem;
+
+        .back-arrow {
+            width: 5.6rem;
+        }
+
+        .header-title {
+            @include flex-col;
+            padding-left: 1.2rem;
+            justify-content: center;
+        }
+
+
+    }
+}

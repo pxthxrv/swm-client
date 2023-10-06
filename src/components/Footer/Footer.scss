@@ -1,4 +1,4 @@
-@import "../../styles/partials/variables";
+// @import "../../styles/partials/variables";
 @import "../../styles/partials/mixins";
 
 .footer {
@@ -6,6 +6,10 @@
     background-color: $swm-light-red;
     border-top-right-radius: 2rem;
     border-top-left-radius: 2rem;
+
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 
     &__row {
         @include flex-row;
