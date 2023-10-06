@@ -1,0 +1,37 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFC2C2;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+.footer__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.8rem 3.4rem 0;
+}
+.footer__col {
+  display: flex;
+  flex-direction: row;
+  height: 3.4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.ftr {
+  display: flex;
+  flex-direction: column;
+}
+.ftr__icon {
+  justify-content: center;
+  align-items: center;
+}
+.ftr__icon--portfolio {
+  height: 4.4rem;
+  width: 4.4rem;
+}
+.ftr__text {
+  text-align: center;
+}/*# sourceMappingURL=Footer.css.map */

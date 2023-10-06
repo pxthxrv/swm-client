@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.scss'
 import Footer from './components/Footer/Footer'
-import CommentsComponent from './Pages/Comments/comments';
+import Comments from './Pages/Comments/comments';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,7 +19,7 @@ function App() {
     <Footer />
       <Router>
         <Routes>
-          <Route path='/Comment' element={<CommentsComponent />} />
+          <Route path='/Comment' element={<Comments />} />
         </Routes>
       </Router>
     </>
