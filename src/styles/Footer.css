@@ -4,6 +4,9 @@
   background-color: #FFC2C2;
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 .footer__row {
   display: flex;
