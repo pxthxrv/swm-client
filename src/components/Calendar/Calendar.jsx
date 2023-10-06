@@ -4,12 +4,12 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 
-const Calendar = (props) => {
+const Calendar = ({ view }) => {
   return (
     <div>
       <FullCalendar
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-        initialView={props.view}
+        initialView={view}
       />
     </div>
   );
