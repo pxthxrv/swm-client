@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.scss'
+import Footer from './components/Footer/Footer'
 import CommentsComponent from './Pages/Comments/comments';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <h5>This is a h5</h5>
       <p>This is a p tag</p>
       <a>This is an a tag</a>
+    <Footer />
       <Router>
         <Routes>
           <Route path='/Comment' element={<CommentsComponent />} />
