@@ -1,0 +1,13 @@
+.team {
+  display: flex;
+  flex-direction: column;
+  padding: 2.7rem 2.7rem 1.6rem 2.7rem;
+}
+.team__title {
+  width: 100%;
+}
+.team__people {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+}/*# sourceMappingURL=Team.css.map */

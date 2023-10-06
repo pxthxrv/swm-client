@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.header__col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.header__row {
+  display: flex;
+  flex-direction: row;
+  padding: 1.3rem 1.6rem 3.6rem 1.6rem;
+}
+.header__row .back-arrow {
+  width: 5.6rem;
+}
+.header__row .header-title {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.2rem;
+  justify-content: center;
+}/*# sourceMappingURL=Header.css.map */
