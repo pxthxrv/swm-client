@@ -1,29 +1,28 @@
-import { useState } from 'react'
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import './App.scss'
-import Footer from './components/Footer/Footer'
+import "./App.scss";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Team from "./components/Team/Team";
 import Comments from './Pages/Comments/comments';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <h1>This is a h1 tag</h1>
-      <h2>This is a h2 tag</h2>
-      <h3>This is a h3 tag</h3>
-      <h4>This is a h4</h4>
-      <h5>This is a h5</h5>
-      <p>This is a p tag</p>
-      <a>This is an a tag</a>
-    <Footer />
+    <div className="iphone-container">
+      <Header />
+      <h1>Key Insights</h1>
+
+      <Team />
+      <Footer />
       <Router>
         <Routes>
           <Route path='/Comment' element={<Comments />} />
         </Routes>
       </Router>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
