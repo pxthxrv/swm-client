@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "Frutier";
+  src: url("../../assets/fonts/Frutiger.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Frutier";
+  src: url("../../assets/fonts/Frutiger_bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Frutier";
+  src: url("../../assets/fonts/Frutiger-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+body {
+  font-family: "Frutier", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.3rem;
+    line-height: 4.4rem;
+    font-weight: 700;
+  }
+}
+
+h2 {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 700;
+  }
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+  }
+}
+
+button,
+a {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  button,
+  a {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}/*# sourceMappingURL=App.css.map */
