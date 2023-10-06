@@ -5,7 +5,7 @@ import mia from "../../assets/icons/mia.svg";
 
 export default function Team() {
   return (
-    <div classNmae="team">
+    <div className="team">
       <h1 className="team__title"></h1>
       <div className="team__people">
         <div className="person">
