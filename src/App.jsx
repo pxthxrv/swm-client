@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.scss'
+import Footer from './components/Footer/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
     <h5>This is a h5</h5>
     <p>This is a p tag</p>
     <a>This is an a tag</a>
+    <Footer />
     </>
   )
 }
