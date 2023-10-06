@@ -1,0 +1,74 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+@font-face {
+    font-family: "Frutier";
+    src: url("../../assets/fonts/Frutiger-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+// @font-face {
+//   font-family: "Avenir Next";
+//   src: url("../../../src/assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"),
+//     url("../../assets/fonts/AvenirNextLTPro.ttf")
+//       format("truetype");
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "Avenir Next";
+//   src: url("../../../src/assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"),
+//     url("../../../src/assets/fonts/AvenirNextLTProBold.ttf")
+//       format("truetype");
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+body {
+  font-family: "Frutier", sans-serif;
+  color: $black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  @include type-rescale(2.4rem, 3.2rem, 700);
+
+  @include tablet {
+    @include type-rescale(3.3rem, 4.4rem, 700);
+  }
+}
+
+h2 {
+  @include type-rescale(1.2rem, 2.0rem, 700);
+}
+
+h3 {
+  @include type-rescale(1.3rem, 1.8rem, 700);
+
+  @include tablet {
+    @include type-rescale(1.4rem, 2.2rem, 700);
+  }
+}
+
+p {
+  @include type-rescale(1.3rem, 1.8rem, 400);
+
+  @include tablet {
+    @include type-rescale(1.4rem, 2.2rem, 400);
+  }
+}
+
+button,
+a {
+  @include type-rescale(1.0rem, 2.0rem, 700);
+
+  @include tablet {
+    @include type-rescale(1.2rem, 2.0rem, 700);
+  }
+}
